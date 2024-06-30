@@ -72,26 +72,20 @@ const Home: React.FC = () => {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold mb-4">Education</h3>
                   <div>
-                    <h4 className="text-lg font-bold">Bachelor of Science in Computer Science</h4>
+                    <h4 className="text-lg font-bold">Bachelor of Science in Computer Science and Engineering</h4>
                     <p className="text-muted-foreground">Kyunpook National Univ. | 2021 - 2025</p>
                     <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>
-                      <li>Completed coursework in data structures, algorithms, and artificial intelligience</li>
+                      <li>Completed coursework in linear algebra, probability and ptatistics, and artificial intelligience</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center">
-              <img src="/cv-page/kbh_drink.jpg" width="300" height="300" alt="John Doe" className="rounded-full" />
-              {/* <Image
-                src="/KBH00.github.io/vercel.svg"
-                alt="Vercel Logo"
-                className="dark:invert"
-                width={100}
-                height={24}
-                priority
-              /> */}
+              <img src="/cv-page/kbh_hood.jpg" width="300" height="300" alt="John Doe" className="rounded-full" />
+               
+               {/* <img src="/kbh_hood.jpg" width="300" height="300" alt="John Doe" className="rounded-full" /> */}
               </div>
             </div>
           </div>
