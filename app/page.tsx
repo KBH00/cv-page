@@ -83,14 +83,15 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-              <Image
+              <img src="/cv-page/kbh_drink.jpg" width="300" height="300" alt="John Doe" className="rounded-full" />
+              {/* <Image
                 src="/KBH00.github.io/vercel.svg"
                 alt="Vercel Logo"
                 className="dark:invert"
                 width={100}
                 height={24}
                 priority
-              />
+              /> */}
               </div>
             </div>
           </div>
