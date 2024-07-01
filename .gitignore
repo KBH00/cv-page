@@ -29,8 +29,8 @@ yarn-error.log*
 .env*.local
 
 #deploy
- next.config.mjs
- 
+next.config.mjs
+
 # vercel
 .vercel
 
