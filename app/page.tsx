@@ -245,7 +245,7 @@ const Home: React.FC = () => {
             <Link href="#" className="hover:underline" prefetch={false}>
               LinkedIn
             </Link>
-            <Link href="#" className="hover:underline" prefetch={false}>
+            <Link href="https://github.com/KBH00" className="hover:underline" prefetch={false}>
               GitHub
             </Link>
           </div>
