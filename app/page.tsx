@@ -1,10 +1,12 @@
-import Link from "next/link"
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
-import React from 'react'
-import Layout from '@/app/layout'
+"use client"
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
+import React, { useState } from 'react';
+import Layout from '@/app/layout';
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -24,16 +26,45 @@ function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
-  )
+  );
 }
 
 const Home: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const projects = [
+    {
+      id: '1',
+      title: 'LLMETA : A.I. based metadata extraction',
+      description: 'Metadata extraction via llama2-7b, RelTR and etc..',
+      imageUrl: '/cv-page/projects/home2.png',
+    },
+    {
+      id: '2',
+      title: 'Paper Tree',
+      description: 'Paper classification and recommendation by BERT',
+      imageUrl: '/cv-page/projects/home.png',
+    },
+    {
+      id: '3',
+      title: 'Object height estimation using webcam',
+      description: 'Height measurment, 3D reconstruction by linear laser and webcam.',
+      imageUrl: '/cv-page/projects/pointc.png',
+    },
+  ];
+
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className={`flex flex-col min-h-[100dvh] ${isMenuOpen ? 'pb-20' : ''}`}>
       <header className="fixed top-0 left-0 right-0 bg-primary text-primary-foreground py-4 px-4 md:px-6 z-50">
         <div className="container mx-auto flex items-center justify-between">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">ByungHyun Kim</h1>
+            <Link href="/#about" className="hover:underline" prefetch={false}>
+              <h1 className="text-3xl font-bold">ByungHyun Kim</h1>
+            </Link>
             {/* <p className="text-lg">Undergraduate Student</p> */}
           </div>
           <nav className="hidden md:flex items-center space-x-4">
@@ -43,10 +74,37 @@ const Home: React.FC = () => {
             <Link href="#experience" className="hover:underline" prefetch={false}>
               Experience
             </Link>
+            <Link href="#projects" className="hover:underline" prefetch={false}>
+              Projects
+            </Link>
+            <Link href="#skills" className="hover:underline" prefetch={false}>
+              Skills
+            </Link>
             <Link href="#papers" className="hover:underline" prefetch={false}>
-                Papers
-              </Link>
-
+              Papers
+            </Link>
+          </nav>
+          <Button
+            variant="outline"
+            size="icon"
+            className="md:hidden"
+            aria-label="Toggle navigation menu"
+            onClick={toggleMenu}
+          >
+            <MenuIcon className="h-6 w-6" />
+          </Button>
+        </div>
+        {isMenuOpen && (
+          <nav className="md:hidden mt-4 flex flex-col space-y-2 bg-primary text-primary-foreground px-4 py-2">
+            <Link href="#about" className="hover:underline" prefetch={false}>
+              About
+            </Link>
+            <Link href="#experience" className="hover:underline" prefetch={false}>
+              Experience
+            </Link>
+            <Link href="#papers" className="hover:underline" prefetch={false}>
+              Papers
+            </Link>
             <Link href="#skills" className="hover:underline" prefetch={false}>
               Skills
             </Link>
@@ -54,38 +112,33 @@ const Home: React.FC = () => {
               Projects
             </Link>
           </nav>
-          <Button variant="outline" size="icon" className="md:hidden" aria-label="Toggle navigation menu">
-            <MenuIcon className="h-6 w-6" />
-          </Button>
-        </div>
+        )}
       </header>
-      <main className="flex-1">
+      <main className={`flex-1 mt-[60px] ${isMenuOpen ? 'mt-20' : ''}`}>
         <section id="about" className="py-12 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-3xl font-bold mb-4">About Me</h2>
                 <p className="text-muted-foreground">
-                  I am an Undergraduate Student majored in Computer Science and Engineering.
-                  I have experience working with a variety of technologies and frameworks.
+                  I am an Undergraduate Student majored in Computer Science and Engineering. I have experience working with a variety of technologies and frameworks.
+                  I improved my leadership skills by participating as a team leader in most projects.
                 </p>
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold mb-4">Education</h3>
+                  {/* <h3 className="text-xl font-bold mb-4">Education</h3> */}
                   <div>
                     <h4 className="text-lg font-bold">Bachelor of Science in Computer Science and Engineering</h4>
                     <p className="text-muted-foreground">Kyunpook National Univ. | 2021 - 2025</p>
                     <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>
-                      <li>Completed coursework in linear algebra, probability and ptatistics, and artificial intelligience</li>
+                      <li>Completed coursework in linear algebra, probability and statistics, and artificial intelligence</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center">
-              <img src="/cv-page/kbh_hood.jpg" width="300" height="300" alt="John Doe" className="rounded-full" />
-               
-               {/* <img src="/kbh_hood.jpg" width="300" height="300" alt="John Doe" className="rounded-full" /> */}
+                <img src="/cv-page/kbh_hood.jpg" width="300" height="300" alt="kbh" className="rounded-full" />
               </div>
             </div>
           </div>
@@ -95,54 +148,32 @@ const Home: React.FC = () => {
             <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-bold">Software Engineer</h3>
-                <p className="text-muted-foreground">Acme Inc. | 2019 - Present</p>
+                <h3 className="text-xl font-bold">Undergraduate Research Student</h3>
+                <p className="text-muted-foreground">Kyungpook National Univ. | 2024.03 - Present</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
-                  <li>Developed and maintained web applications using React, Node.js, and MongoDB</li>
-                  <li>Collaborated with cross-functional teams to design and implement new features</li>
+                  <li>Develop and build a framework for translation and recommendation in various languages in medical domain</li>
+                  <li>Collaborated with cross-functional teams to deploy to the server, fine-tuning language models and research about readability</li>
                   <li>Participated in code reviews and pair programming sessions</li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Web Developer Intern</h3>
-                <p className="text-muted-foreground">Widgets Inc. | 2018 - 2019</p>
+                <h3 className="text-xl font-bold">A.I Research Intern</h3>
+                <p className="text-muted-foreground">Beamworks. | 2023.12 - 2024.02</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
-                  <li>Assisted in the development and maintenance of company website</li>
-                  <li>Gained experience in HTML, CSS, and JavaScript</li>
-                  <li>Participated in weekly team meetings and presentations</li>
+                  <li>LLM research available in the medical domain for Question Answering</li>
+                  <li>Research on language model performance improvement through question rewriting and medical data and terminology research</li>
+                  <li>Participated in weekly team meetings and presentations (i.e., review) about research papers</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="papers" className="py-12 md:py-24">
-            <div className="container mx-auto px-4 md:px-6">
-              <h2 className="text-3xl font-bold mb-8">Papers</h2>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold">Paper Title 1</h3>
-                  <p className="text-muted-foreground">Description of Paper 1</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold">Paper Title 2</h3>
-                  <p className="text-muted-foreground">Description of Paper 2</p>
-                </div>
+              <div>
+                <h3 className="text-xl font-bold">A.I Research Intern</h3>
+                <p className="text-muted-foreground">Korea Institute of Science and Technology. | 2023.6 - 2023.08</p>
+                <ul className="list-disc pl-6 mt-2 text-muted-foreground">
+                  <li>Research of scene graph generation and segment anything base models</li>
+                  <li>Review and presentation of papers at top-tier conferences such as CVPR</li>
+                  <li>Develop models reflecting the latest research results, code reviews and participate in seminars</li>
+                </ul>
               </div>
-            </div>
-          </section>
-        <section id="skills" className="py-12 md:py-24 bg-muted">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-8">Skills</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <Badge variant="secondary">React</Badge>
-              <Badge variant="secondary">Node.js</Badge>
-              <Badge variant="secondary">MongoDB</Badge>
-              <Badge variant="secondary">JavaScript</Badge>
-              <Badge variant="secondary">HTML/CSS</Badge>
-              <Badge variant="secondary">Git</Badge>
-              <Badge variant="secondary">SQL</Badge>
-              <Badge variant="secondary">Agile</Badge>
-              <Badge variant="secondary">Test Driven Development</Badge>
             </div>
           </div>
         </section>
@@ -150,84 +181,66 @@ const Home: React.FC = () => {
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              <Link href="#" className="group" prefetch={false}>
-                <Card className="h-full">
-                  <CardHeader>
-                  <Image
-                    src="/KBH00.github.io/vercel.svg"
-                    alt="Vercel Logo"
-                    className="dark:invert"
-                    width={100}
-                    height={24}
-                    priority
-                  />
-                  </CardHeader>
-                  <CardContent className="p-4">
-                    <h3 className="text-xl font-bold mb-2">Project 1</h3>
-                    <p className="text-muted-foreground">
-                      A full-stack web application built with React, Node.js, and MongoDB.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="pt-4">
-                    <Button variant="link" className="group-hover:underline">
-                      Learn More
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link href="#" className="group" prefetch={false}>
-                <Card className="h-full">
-                  <CardHeader>
-                        <Image
-                      src="/KBH00.github.io/vercel.svg"
-                      alt="Vercel Logo"
-                      className="dark:invert"
-                      width={100}
-                      height={24}
-                      priority
-                    />
-                  </CardHeader>
-                  <CardContent className="p-4">
-                    <h3 className="text-xl font-bold mb-2">Project 2</h3>
-                    <p className="text-muted-foreground">A mobile app built with React Native and Firebase.</p>
-                  </CardContent>
-                  <CardFooter className="pt-4">
-                    <Button variant="link" className="group-hover:underline">
-                      Learn More
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link href="#" className="group" prefetch={false}>
-                <Card className="h-full">
-                  <CardHeader>
-                        <Image
-                      src="/KBH00.github.io/vercel.svg"
-                      alt="Vercel Logo"
-                      className="dark:invert"
-                      width={100}
-                      height={24}
-                      priority
-                    />
-                  </CardHeader>
-                  <CardContent className="p-4">
-                    <h3 className="text-xl font-bold mb-2">Project 3</h3>
-                    <p className="text-muted-foreground">A desktop application built with Electron and React.</p>
-                  </CardContent>
-                  <CardFooter className="pt-4">
-                    <Button variant="link" className="group-hover:underline">
-                      Learn More
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Link>
+              {projects.map((project) => (
+                <Link key={project.id} href={`/pages/${project.id}`} className="group" prefetch={true}>
+                  <Card className="h-full">
+                    <CardHeader>
+                      <Image src={project.imageUrl} alt={project.title} width={100} height={24} />
+                    </CardHeader>
+                    <CardContent className="p-4">
+                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-muted-foreground">{project.description}</p>
+                    </CardContent>
+                    <CardFooter className="pt-4">
+                      <Button variant="link" className="group-hover:underline">
+                        Learn More
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section id="skills" className="py-12 md:py-24 bg-muted">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold mb-8">Skills</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <Badge variant="secondary" imageSrc="/cv-page/pytorch.png" altText="Icon">PyTorch</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/tensorflow.jpg" altText="Icon">TensorFlow</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/langchain.png" altText="Icon">LangChain</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/scipy.png" altText="Icon">Scipy</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/scikit-learn.jpg" altText="Icon">Scikit-Learn</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/git.png" altText="Icon">Git</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/flask.jpg" altText="Icon">Flask</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/next.png" altText="Icon">Next.js</Badge>
+              <Badge variant="secondary" imageSrc="/cv-page/docker.png" altText="Icon">Docker</Badge>
+            </div>
+          </div>
+        </section>
+        <section id="papers" className="py-12 md:py-24">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold mb-8">Papers</h2>
+            <div className="space-y-8">
+              <div>
+              <h3 className="text-xl font-bold">
+               <Link href="/paper.pdf" target="_blank" className="hover:underline">
+                    A Study of Method for Metadata Extraction via LLM and Scene Graph Generation
+               </Link>
+              </h3>                
+              <p className="text-muted-foreground">[Best Paper in KICS 2024 summer]</p>
+              </div>
+              {/* <div>
+                <h3 className="text-xl font-bold">Paper Title 2</h3>
+                <p className="text-muted-foreground">Description of Paper 2</p>
+              </div> */}
             </div>
           </div>
         </section>
       </main>
       <footer className="bg-primary text-primary-foreground py-6 px-4 md:px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <p className="text-sm">&copy; 2024 John Doe</p>
+          <p className="text-sm">&copy; 2024 ByungHyun Kim</p>
           <div className="flex items-center space-x-4">
             <Link href="#" className="hover:underline" prefetch={false}>
               LinkedIn
@@ -239,7 +252,7 @@ const Home: React.FC = () => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
