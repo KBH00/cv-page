@@ -138,7 +138,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <img src="/cv-page/kbh_hood.jpg" width="300" height="300" alt="kbh" className="rounded-full" />
+                <img src="/cv-page/kbh_sa.jpg" width="300" height="300" alt="kbh" className="rounded-full" />
               </div>
             </div>
           </div>
