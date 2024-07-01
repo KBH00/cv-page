@@ -9,7 +9,7 @@ const nextConfig = {
    *
    */
   output: "export",
-  basePath: '/cv-page',
+  //basePath: '/cv-page',
   // assetPrefix: prefix,
   /**
    * Set base path. This is usually the slug of your repository.

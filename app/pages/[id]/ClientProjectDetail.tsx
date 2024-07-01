@@ -173,7 +173,7 @@ const ClientProjectDetail: React.FC = () => {
                 </li>
                 {project.github && (
                     <Link href={project.github} className="hover:underline" prefetch={true}>
-                      <b>Github Organization</b>
+                      <b>[Github Organization]</b>
                     </Link>
                 )}
                 <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>
