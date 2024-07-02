@@ -143,14 +143,14 @@ const Home: React.FC = () => {
                     <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>
-                      <li>Completed coursework in linear algebra, probability and statistics, and artificial intelligence</li>
+                      {/* <li>Completed coursework in linear algebra, probability and statistics, and artificial intelligence</li> */}
                       <li>Python programming curriculum mentorship and tutoring</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center">
-                <img src="/cv-page/kbh_sa.jpg" width="300" height="300" alt="kbh" className="rounded-full" />
+              <Image src="/cv-page/kbh_sa.jpg" width={300} height={300} alt="kbh" className="rounded-full md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96" />
               </div>
             </div>
           </div>
