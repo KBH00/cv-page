@@ -13,7 +13,13 @@ cv-page
 │  ├─ favicon.ico
 │  ├─ globals.css
 │  ├─ layout.tsx
-│  └─ page.tsx
+│  ├─ page.tsx
+│  └─ pages
+│     ├─ introduce.tsx
+│     ├─ [id]
+│     │  ├─ ClientProjectDetail.tsx
+│     │  └─ page.tsx
+│     └─ _app.tsx
 ├─ components
 │  └─ ui
 │     ├─ badge.tsx
@@ -23,12 +29,8 @@ cv-page
 ├─ lib
 │  └─ utils.ts
 ├─ LICENSE
-├─ next.config.mjs
 ├─ package-lock.json
 ├─ package.json
-├─ pages
-│  └─ projects
-│     └─ [id].tsx
 ├─ postcss.config copy.mjs
 ├─ postcss.config.mjs
 ├─ public
@@ -38,11 +40,31 @@ cv-page
 │  ├─ git.png
 │  ├─ kbh_drink.jpg
 │  ├─ kbh_hood.jpg
+│  ├─ kbh_sa.jpg
 │  ├─ kbh_with_gfjpg.jpg
 │  ├─ langchain.png
 │  ├─ next.png
 │  ├─ next.svg
+│  ├─ paper.pdf
 │  ├─ placeholder.svg
+│  ├─ projects
+│  │  ├─ analysis.png
+│  │  ├─ calibration.jpg
+│  │  ├─ home.png
+│  │  ├─ home1.png
+│  │  ├─ home2.png
+│  │  ├─ iamge1.png
+│  │  ├─ laser1.jpg
+│  │  ├─ laser2.png
+│  │  ├─ login.png
+│  │  ├─ main.png
+│  │  ├─ network_img.png
+│  │  ├─ overall.png
+│  │  ├─ paper1.png
+│  │  ├─ payment.png
+│  │  ├─ pointc.png
+│  │  ├─ triangle.png
+│  │  └─ unnamed.jpg
 │  ├─ pytorch.png
 │  ├─ scikit-learn.jpg
 │  ├─ scipy.png

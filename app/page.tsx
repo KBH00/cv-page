@@ -39,18 +39,24 @@ const Home: React.FC = () => {
   const projects = [
     {
       id: '1',
+      title: 'Working on a new project!',
+      description: 'Scheduled to be written after project completion',
+      imageUrl: '',
+    },
+    {
+      id: '2',
       title: 'LLMETA : A.I. based metadata extraction',
       description: 'Metadata extraction via llama2-7b, RelTR and etc..',
       imageUrl: '/cv-page/projects/home2.png',
     },
     {
-      id: '2',
+      id: '3',
       title: 'Paper Tree',
       description: 'Paper classification and recommendation by BERT',
       imageUrl: '/cv-page/projects/home.png',
     },
     {
-      id: '3',
+      id: '4',
       title: 'Object height estimation using webcam',
       description: 'Height measurment, 3D reconstruction by linear laser and webcam.',
       imageUrl: '/cv-page/projects/pointc.png',
@@ -102,14 +108,14 @@ const Home: React.FC = () => {
             <Link href="#experience" className="hover:underline" prefetch={false}>
               Experience
             </Link>
-            <Link href="#papers" className="hover:underline" prefetch={false}>
-              Papers
+            <Link href="#projects" className="hover:underline" prefetch={false}>
+              Projects
             </Link>
             <Link href="#skills" className="hover:underline" prefetch={false}>
               Skills
             </Link>
-            <Link href="#projects" className="hover:underline" prefetch={false}>
-              Projects
+            <Link href="#papers" className="hover:underline" prefetch={false}>
+              Papers
             </Link>
           </nav>
         )}
@@ -121,14 +127,19 @@ const Home: React.FC = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">About Me</h2>
                 <p className="text-muted-foreground">
-                  I am an Undergraduate Student majored in Computer Science and Engineering. I have experience working with a variety of technologies and frameworks.
-                  I improved my leadership skills by participating as a team leader in most projects.
+                  I am an Undergraduate Student majored in Computer Science and Engineering who interested in artificial intelligence and am diligently researching such as NLP and CV, and hope to study more in the future.
                 </p>
+                <p className="text-muted-foreground">
+                My Research interests are RL, Diffusion, LLM, LMM, Detection, Scene Graph Generation.
+                </p>
+              <Link href="/kbh" className="hover:underline" prefetch={false}>
+                  <b>[Something more personal..]</b>
+                </Link>
                 <div className="mt-8">
                   {/* <h3 className="text-xl font-bold mb-4">Education</h3> */}
                   <div>
                     <h4 className="text-lg font-bold">Bachelor of Science in Computer Science and Engineering</h4>
-                    <p className="text-muted-foreground">Kyunpook National Univ. | 2021 - 2025</p>
+                    <p className="text-muted-foreground">Kyunpook National Univ. | 2021 - Current</p>
                     <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>

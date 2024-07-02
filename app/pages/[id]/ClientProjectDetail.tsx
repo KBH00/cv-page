@@ -1,9 +1,10 @@
 "use client";
 
 import { useParams } from 'next/navigation';
-import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import React, { useState } from 'react';
+
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -34,6 +35,29 @@ const ClientProjectDetail: React.FC = () => {
   const projects = [
     {
       id: '1',
+      title: '',
+      description: '2024.06 ~ Current',
+      detail: '',
+
+      goals1: '1.',
+      goals2: '2.',
+      goals3: '3.',
+
+      tech1: '',
+      tech2: '',
+      tech3: '',
+
+      Team: '',
+      github: '',
+
+      imageUrl1: '',
+      imageUrl2: '',
+      imageUrl3: '',
+      imageUrl4: '',
+      imageUrl5: '',
+    },
+    {
+      id: '2',
       title: 'LLMETA : A.I. based metadata extraction',
       description: '2024.03 ~ 2024.06',
       detail: 'The significance of metadata in information retrieval and data management is rapidly increasing,\
@@ -60,7 +84,7 @@ const ClientProjectDetail: React.FC = () => {
       imageUrl5: '/cv-page/projects/unnamed.jpg',
     },
     {
-      id: '2',
+      id: '3',
       title: 'Paper Tree',
       description: '2023.06 ~ 2023.08',
       detail: 'When we study some papers, reference papers play a very important role. To analyze this more efficiently, we use LLM to classify reference papers and recommend papers.',
@@ -79,7 +103,7 @@ const ClientProjectDetail: React.FC = () => {
       imageUrl5: '/cv-page/projects/analysis.png',
     },
     {
-      id: '3',
+      id: '4',
       title: 'Object height estimation using webcam',
       description: '2023.03 ~ 2023.06',
       detail: 'After covid-19, the supply of webcams has increased, contributing to 3D reconstruction\
@@ -101,7 +125,11 @@ const ClientProjectDetail: React.FC = () => {
   ];
 
   const project = projects.find((p) => p.id === id);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -109,37 +137,61 @@ const ClientProjectDetail: React.FC = () => {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="relative w-full h-[60vh] bg-cover bg-center bg-no-repeat">
-        <header className="fixed top-0 left-0 right-0 bg-primary text-primary-foreground py-4 px-4 md:px-6 z-50">
-          <div className="container mx-auto flex items-center justify-between">
-            <div className="space-y-2">
-              <Link href="/#about" className="hover:underline" prefetch={false}>
-                <h1 className="text-3xl font-bold">ByungHyun Kim</h1>
-              </Link>
-            </div>
-            <nav className="hidden md:flex items-center space-x-4">
-              <Link href="/#about" className="hover:underline" prefetch={false}>
-                About
-              </Link>
-              <Link href="/#experience" className="hover:underline" prefetch={false}>
-                Experience
-              </Link>
-              <Link href="/#projects" className="hover:underline" prefetch={false}>
-                Projects
-              </Link>
-
-              <Link href="/#skills" className="hover:underline" prefetch={false}>
-                Skills
-              </Link>
-              <Link href="/#papers" className="hover:underline" prefetch={false}>
-                Papers
-              </Link>
-
-            </nav>
-            <Button variant="outline" size="icon" className="md:hidden" aria-label="Toggle navigation menu">
-              <MenuIcon className="h-6 w-6" />
-            </Button>
+      <header className="fixed top-0 left-0 right-0 bg-primary text-primary-foreground py-4 px-4 md:px-6 z-50">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="space-y-2">
+            <Link href="/#about" className="hover:underline" prefetch={false}>
+              <h1 className="text-3xl font-bold">ByungHyun Kim</h1>
+            </Link>
+            {/* <p className="text-lg">Undergraduate Student</p> */}
           </div>
-        </header>
+          <nav className="hidden md:flex items-center space-x-4">
+            <Link href="/#about" className="hover:underline" prefetch={false}>
+              About
+            </Link>
+            <Link href="/#experience" className="hover:underline" prefetch={false}>
+              Experience
+            </Link>
+            <Link href="/#projects" className="hover:underline" prefetch={false}>
+              Projects
+            </Link>
+            <Link href="/#skills" className="hover:underline" prefetch={false}>
+              Skills
+            </Link>
+            <Link href="/#papers" className="hover:underline" prefetch={false}>
+              Papers
+            </Link>
+          </nav>
+          <Button
+            variant="outline"
+            size="icon"
+            className="md:hidden"
+            aria-label="Toggle navigation menu"
+            onClick={toggleMenu}
+          >
+            <MenuIcon className="h-6 w-6" />
+          </Button>
+        </div>
+        {isMenuOpen && (
+          <nav className="md:hidden mt-4 flex flex-col space-y-2 bg-primary text-primary-foreground px-4 py-2">
+            <Link href="/#about" className="hover:underline" prefetch={false}>
+              About
+            </Link>
+            <Link href="/#experience" className="hover:underline" prefetch={false}>
+              Experience
+            </Link>
+            <Link href="/#projects" className="hover:underline" prefetch={false}>
+              Projects
+            </Link>
+            <Link href="/#skills" className="hover:underline" prefetch={false}>
+              Skills
+            </Link>
+            <Link href="/#papers" className="hover:underline" prefetch={false}>
+              Papers
+            </Link>
+          </nav>
+        )}
+      </header>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <img src={project.imageUrl1} alt={project.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white text-center px-4">
