@@ -275,7 +275,7 @@ export default function Component() {
             </div>
             <div className="space-y-4">
               <p>
-                Hi there! I'm Byunghyun Kim from seoul.
+                Hi there! I&apos;m Byunghyun Kim from seoul.
               </p>
               <p>I am interested in artificial intelligence and am diligently researching such as NLP and CV, and hope to study more in the future.
               I developed my research skills by participating in various projects and research. Also improved my leadership skills by participating as a team leader in most projects.</p>
@@ -290,13 +290,13 @@ export default function Component() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">My Hobbies</h2>
               <p>
-                In my free time, I enjoy a variety of hobbies that keep me engaged and fulfilled. I'm an avid reader,
+                In my free time, I enjoy a variety of hobbies that keep me engaged and fulfilled. I&apos;m an avid reader,
                 constantly exploring new genres and diving into thought-provoking books. But I especially like mystery novels and the history of science.
                 I also have a keen interest in
-                films. I highly recommend the movies “Hereditary,” “I Am Legend,” and “28 Weeks Later.” Someday, i'll make a page for film review.
+                films. I highly recommend the movies “Hereditary,” “I Am Legend,” and “28 Weeks Later.” Someday, i&apos;ll make a page for film review.
               </p>
               <p>
-                Additionally, I'm a music enthusiast, with a diverse taste that spans from classical to contemporary.
+                Additionally, I&apos;m a music enthusiast, with a diverse taste that spans from classical to contemporary.
                 You can often find me playing the violin or experimenting with different instruments. Outdoor
                 activities, such as hiking and camping, also hold a special place in my heart, as they allow me to
                 connect with nature and recharge.
@@ -331,17 +331,17 @@ export default function Component() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">My Future Plans</h2>
               <p>
-                As I look towards the future, I'm excited about the possibilities that lie ahead. My ultimate goal is to
+                As I look towards the future, I&apos;m excited about the possibilities that lie ahead. My ultimate goal is to
                 continue growing as a software engineer, honing my skills and staying up-to-date with the latest
                 technologies and industry trends.
               </p>
               <p>
-                I aspire to work on challenging and innovative projects that push the boundaries of what's possible.
-                Whether it's developing cutting-edge applications, contributing to open-source initiatives, or
-                collaborating with talented teams, I'm driven to make a meaningful impact in the tech industry.
+                I aspire to work on challenging and innovative projects that push the boundaries of what&apos;s possible.
+                Whether it&apos;s developing cutting-edge applications, contributing to open-source initiatives, or
+                collaborating with talented teams, I&apos;m driven to make a meaningful impact in the tech industry.
               </p>
               <p>
-                Beyond my professional aspirations, I'm also passionate about giving back to the community. I hope to
+                Beyond my professional aspirations, I&apos;m also passionate about giving back to the community. I hope to
                 find opportunities to mentor aspiring developers, share my knowledge, and inspire the next generation of
                 tech leaders.
               </p>
