@@ -144,6 +144,7 @@ const Home: React.FC = () => {
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>
                       <li>Completed coursework in linear algebra, probability and statistics, and artificial intelligence</li>
+                      <li>Python programming curriculum mentorship and tutoring</li>
                     </ul>
                   </div>
                 </div>
