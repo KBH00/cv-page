@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from 'next/image';
+
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -174,6 +176,28 @@ function Music2Icon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
+function BeerIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M17 11h1a3 3 0 0 1 0 6h-1" />
+      <path d="M9 12v6" />
+      <path d="M13 12v6" />
+      <path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z" />
+      <path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" />
+    </svg>
+  )
+}
 
 function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -199,7 +223,13 @@ function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headingStyle = {
+    marginBottom: '5px',
+  };
 
+  const paragraphStyle = {
+    marginTop: '0px',
+  };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -285,8 +315,37 @@ export default function Component() {
             </div>
           </div>
         </section>
+        
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold">My pros and cons</h2>
+              
+              <h5 style={headingStyle}><b>Pros.</b></h5>
+              <p style={paragraphStyle}>
+                1. By experiencing many papers, internship, seminars and conferences i can quickly and accurately research the latest technologies and papers i need.</p>
+              <p>
+                2. I have a lot of experience construct datasets, developing models, and designing, and am familiar with related frameworks.
+              </p>
+              <p>
+                3. As a team leader on bunch of projects, I gained leadership and teamwork skills through my experience leading projects.</p>
+              <h5 style={headingStyle}><b>Cons.</b></h5>
+              <p style={paragraphStyle}>
+                1. Lack of deep understanding of a specific field, instead interested in various field.
+              </p>
+              <p>
+              2. Difficult to develop innovative and creative technology
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Image src="/cv-page/kbh_laptop.jpg" width={300} height={300} alt="kbh" className="rounded-full md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-112 2xl:h-112 " />
+              </div>
+            </div>
+            
+
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">My Hobbies</h2>
               <p>
@@ -296,9 +355,8 @@ export default function Component() {
                 films. I highly recommend the movies “Hereditary,” “I Am Legend,” and “28 Weeks Later.” Someday, i&apos;ll make a page for film review.
               </p>
               <p>
-                Additionally, I&apos;m a music enthusiast, with a diverse taste that spans from classical to contemporary.
-                You can often find me playing the violin or experimenting with different instruments. Outdoor
-                activities, such as hiking and camping, also hold a special place in my heart, as they allow me to
+                Additionally, I enjoy indulging in alcoholic beverages as a means to unwind and alleviate stress, with a particular fondness for whiskey, beer, and red wine.
+                Outdoor activities, such as hiking and camping, also hold a special place in my heart, as they allow me to
                 connect with nature and recharge.
               </p>
             </div>
@@ -315,8 +373,8 @@ export default function Component() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-lg bg-background p-4 shadow-sm">
-                  <Music2Icon className="h-8 w-8 text-primary" />
-                  <h3 className="mt-2 text-lg font-medium">Music</h3>
+                  <BeerIcon className="h-8 w-8 text-primary" />
+                  <h3 className="mt-2 text-lg font-medium">Drinking</h3>
                 </div>
                 <div className="rounded-lg bg-background p-4 shadow-sm">
                   <MountainIcon className="h-8 w-8 text-primary" />
@@ -326,24 +384,29 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold">My Future Plans</h2>
+              <h2 className="text-3xl font-bold">My Future Plans</h2> 
               <p>
-                As I look towards the future, I&apos;m excited about the possibilities that lie ahead. My ultimate goal is to
-                continue growing as a software engineer, honing my skills and staying up-to-date with the latest
-                technologies and industry trends.
+              As I look towards the future, I&apos;m excited about the possibilities that lie ahead in
+               artificial intelligence, particularly in fields like Natural Language Processing 
+               (NLP) and Computer Vision (CV). My journey so far has been marked by a dedication
+                to honing my research and leadership skills through various projects.
               </p>
               <p>
-                I aspire to work on challenging and innovative projects that push the boundaries of what&apos;s possible.
-                Whether it&apos;s developing cutting-edge applications, contributing to open-source initiatives, or
-                collaborating with talented teams, I&apos;m driven to make a meaningful impact in the tech industry.
+              Moving forward, my goal is to delve deeper into AI, continuing to advance as a 
+              software engineer. I aim to stay at the forefront of technological advancements, 
+              ensuring I am adept at leveraging the latest tools and methodologies in NLP and CV. 
+              This will enable me to contribute meaningfully to groundbreaking projects that 
+              push the boundaries of innovation.
               </p>
               <p>
-                Beyond my professional aspirations, I&apos;m also passionate about giving back to the community. I hope to
-                find opportunities to mentor aspiring developers, share my knowledge, and inspire the next generation of
-                tech leaders.
+              I aspire to work on challenging endeavors that not only showcase my technical 
+              prowess but also allow me to collaborate with diverse teams of experts. Whether
+               it&apos;s developing new applications, contributing to open-source initiatives, or 
+               leading projects as a team leader, I am eager to make a significant impact in 
+               the tech industry.
               </p>
             </div>
             <div className="grid gap-4">
@@ -363,7 +426,7 @@ export default function Component() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-muted">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">&copy; 2024 Byunghyun Kim</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>

@@ -240,7 +240,7 @@ const Home: React.FC = () => {
                     A Study of Method for Metadata Extraction via LLM and Scene Graph Generation
                </Link>
               </h3>                
-              <p className="text-muted-foreground">[Best Paper in KICS 2024 summer]</p>
+              <p className="text-muted-foreground">[Honored to receive the Best Paper Award at KICS 2024 Summer]</p>
               </div>
               {/* <div>
                 <h3 className="text-xl font-bold">Paper Title 2</h3>
