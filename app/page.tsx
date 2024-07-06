@@ -194,7 +194,7 @@ const Home: React.FC = () => {
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <Link key={project.id} href={`/pages/${project.id}`} className="group" prefetch={true}>
+                <Link key={project.id} href={`/project/${project.id}`} className="group" prefetch={true}>
                   <Card className="h-full">
                     <CardHeader>
                       <Image src={project.imageUrl} alt={project.title} width={100} height={24} />

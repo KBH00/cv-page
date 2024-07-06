@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import React, { useState } from 'react';
@@ -126,9 +126,24 @@ const ClientProjectDetail: React.FC = () => {
 
   const project = projects.find((p) => p.id === id);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const projectIndex = projects.findIndex((p) => p.id === id);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const handlePrevProject = () => {
+    if (projectIndex > 0) {
+      const prevProjectId = projects[projectIndex - 1].id;
+      router.push(`/project/${prevProjectId}`);
+    }
+  };
+
+  const handleNextProject = () => {
+    if (projectIndex < projects.length - 1) {
+      const nextProjectId = projects[projectIndex + 1].id;
+      router.push(`/project/${nextProjectId}`);
+    }
   };
   if (!project) {
     return <div>Project not found</div>;
@@ -192,12 +207,44 @@ const ClientProjectDetail: React.FC = () => {
           </nav>
         )}
       </header>
-        <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/50 z-10" />
         <img src={project.imageUrl1} alt={project.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white text-center px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{project.title}</h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-3xl">{project.description}</p>
         </div>
+        {projectIndex > 0 && (
+          <div
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 cursor-pointer p-2 bg-black/50 rounded-full"
+            onClick={handlePrevProject}
+          >
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </div>
+        )}
+        {projectIndex < projects.length - 1 && (
+          <div
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 cursor-pointer p-2 bg-black/50 rounded-full"
+            onClick={handleNextProject}
+          >
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        )}
       </section>
       <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
