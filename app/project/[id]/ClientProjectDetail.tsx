@@ -104,7 +104,7 @@ const ClientProjectDetail: React.FC = () => {
     },
     {
       id: '4',
-      title: 'Object height estimation using webcam',
+      title: 'Object height estimation via webcam',
       description: '2023.03 ~ 2023.06',
       detail: 'After covid-19, the supply of webcams has increased, contributing to 3D reconstruction\
        of objects or anormally detection by measuring object size through webcams and linear lasers.',
