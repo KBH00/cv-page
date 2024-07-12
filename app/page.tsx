@@ -169,7 +169,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">A.I Research Intern</h3>
+                <h3 className="text-xl font-bold">A.I. Research Intern</h3>
                 <p className="text-muted-foreground">Beamworks. | 2023.12 - 2024.02</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>LLM research available in the medical domain for Question Answering</li>
@@ -178,7 +178,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">A.I Research Intern</h3>
+                <h3 className="text-xl font-bold">A.I. Research Intern</h3>
                 <p className="text-muted-foreground">Korea Institute of Science and Technology. | 2023.6 - 2023.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research of scene graph generation and segment anything base models</li>
