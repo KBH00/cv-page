@@ -3,6 +3,7 @@
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 
@@ -284,10 +285,10 @@ const ClientProjectDetail: React.FC = () => {
               </ul>
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-              <img src={project.imageUrl2} alt="Project Image 1" className="rounded-md object-cover" />
-              <img src={project.imageUrl3} alt="Project Image 2" className="rounded-md object-cover" />
-              <img src={project.imageUrl4} alt="Project Image 3" className="rounded-md object-cover" />
-              <img src={project.imageUrl5} alt="Project Image 4" className="rounded-md object-cover" />
+            <Image src={project.imageUrl2} alt="Project Image 1" className="rounded-md object-cover" />
+            <Image src={project.imageUrl3} alt="Project Image 2" className="rounded-md object-cover" />
+            <Image src={project.imageUrl4} alt="Project Image 3" className="rounded-md object-cover" />
+            <Image src={project.imageUrl5} alt="Project Image 4" className="rounded-md object-cover" />
             </div>
           </div>
         </div>

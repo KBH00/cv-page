@@ -57,7 +57,7 @@ const Home: React.FC = () => {
     },
     {
       id: '4',
-      title: 'Object height estimation using webcam',
+      title: 'Object height estimation via webcam',
       description: 'Height measurment, 3D reconstruction by linear laser and webcam.',
       imageUrl: '/cv-page/projects/pointc.png',
     },
