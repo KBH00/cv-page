@@ -174,6 +174,7 @@ const Home: React.FC = () => {
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>LLM research available in the medical domain for Question Answering</li>
                   <li>Research on language model performance improvement through question rewriting and medical data and terminology research</li>
+                  <li>Research on Enhancing medical anomaly detection and segmentation efficiency utilizing SAM and FastSAM</li>
                   <li>Participated in weekly team meetings and presentations (i.e., review) about research papers</li>
                 </ul>
               </div>
