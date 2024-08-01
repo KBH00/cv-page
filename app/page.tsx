@@ -180,7 +180,7 @@ const Home: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">A.I. Research Intern</h3>
-                <p className="text-muted-foreground">Korea Institute of Science and Technology. | 2023.6 - 2023.08</p>
+                <p className="text-muted-foreground">Korea Institute of Science and Technology. | 2023.06 - 2023.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research of scene graph generation and segment anything base models</li>
                   <li>Review and presentation of papers at top-tier conferences such as CVPR</li>
