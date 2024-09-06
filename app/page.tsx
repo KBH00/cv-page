@@ -130,7 +130,7 @@ const Home: React.FC = () => {
                   I am an Undergraduate Student majored in Computer Science and Engineering who interested in artificial intelligence and am diligently researching such as NLP and CV, and hope to study more in the future.
                 </p>
                 <p className="text-muted-foreground">
-                My Research interests are Graph, Diffusion, LMM, brain function&cognition.
+                My Research interests are Medical A.I. , Alzheimer's, Diffusion, LMM.
                 </p>
               <Link href="/kbh" className="hover:underline" prefetch={false}>
                   <b>[Something more personal..]</b>
