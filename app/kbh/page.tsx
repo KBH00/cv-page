@@ -310,7 +310,7 @@ export default function Component() {
               <p>I am interested in artificial intelligence and am diligently researching such as NLP and CV, and hope to study more in the future.
               I developed my research skills by participating in various projects and research. Also improved my leadership skills by participating as a team leader in most projects.</p>
               <p>
-                My Research interests are Graph, Diffusion, LMM, brain function&cognition.
+               My Research interests are Medical A.I. , Alzheimer's, Diffusion, LMM.
               </p>
             </div>
           </div>
