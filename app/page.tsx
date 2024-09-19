@@ -255,9 +255,9 @@ const Home: React.FC = () => {
         <div className="container mx-auto flex items-center justify-between">
           <p className="text-sm">&copy; 2024 ByungHyun Kim</p>
           <div className="flex items-center space-x-4">
-            {/* <Link href="https://www.linkedin.com/in/byunghyun-kim-a05452319" className="hover:underline" prefetch={false}>
+            <Link href="https://www.linkedin.com/in/byunghyun-kim-a05452319" className="hover:underline" prefetch={false}>
               LinkedIn
-            </Link> */}
+            </Link>
             <Link href="https://github.com/KBH00" className="hover:underline" prefetch={false}>
               GitHub
             </Link>
