@@ -159,6 +159,16 @@ const Home: React.FC = () => {
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
             <div className="space-y-8">
+            <div>
+                <h3 className="text-xl font-bold">Research Intern</h3>
+                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology
+                | 2024.09 - Present</p>
+                <ul className="list-disc pl-6 mt-2 text-muted-foreground">
+                  <li>Research on fMRI processing</li>
+                  <li>T2, FLAIR data analysis</li>
+                  <li>Vascular budren, Alzheimer's Analysis Study</li>
+                </ul>
+              </div>
               <div>
                 <h3 className="text-xl font-bold">Undergraduate Research Student</h3>
                 <p className="text-muted-foreground">Kyungpook National Univ. | 2024.03 - 2024.08</p>
