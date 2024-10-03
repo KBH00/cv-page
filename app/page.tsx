@@ -166,7 +166,7 @@ const Home: React.FC = () => {
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research on fMRI processing</li>
                   <li>T2, FLAIR data analysis</li>
-                  <li>Vascular budren, Alzheimer's Analysis Study</li>
+                  <li>Research on vascular budren, Alzheimer&apos;s</li>
                 </ul>
               </div>
               <div>
