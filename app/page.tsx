@@ -147,6 +147,15 @@ const Home: React.FC = () => {
                       <li>Python programming curriculum mentorship and tutoring</li>
                     </ul>
                   </div>
+                  <div>
+                    <h4 className="text-lg font-bold">Google Machine Learning Bootcamp</h4>
+                    <p className="text-muted-foreground">Google | 2024.07 - 2024.10</p>
+                    <ul className="list-disc pl-6 mt-2 text-muted-foreground">
+                      <li>Coursera lectures complete</li>
+                      <li>Participate in kaggle competition</li>
+                      <li>Gemma sprint</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div className="flex justify-center">
