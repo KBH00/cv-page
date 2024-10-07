@@ -147,6 +147,7 @@ const Home: React.FC = () => {
                       <li>Python programming curriculum mentorship and tutoring</li>
                     </ul>
                   </div>
+                  <div></div>
                   <div>
                     <h4 className="text-lg font-bold">Google Machine Learning Bootcamp</h4>
                     <p className="text-muted-foreground">Google | 2024.07 - 2024.10</p>
