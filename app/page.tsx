@@ -171,7 +171,7 @@ const Home: React.FC = () => {
             <div className="space-y-8">
             <div>
                 <h3 className="text-xl font-bold">Research Intern</h3>
-                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology
+                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology.
                 | 2024.09 - Present</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research on fMRI processing</li>
