@@ -139,7 +139,7 @@ const Home: React.FC = () => {
                   {/* <h3 className="text-xl font-bold mb-4">Education</h3> */}
                   <div>
                     <h4 className="text-lg font-bold">Bachelor of Science in Computer Science and Engineering</h4>
-                    <p className="text-muted-foreground">Kyunpook National Univ. | 2021 - Current</p>
+                    <p className="text-muted-foreground">Kyungpook National Univ. | 2021 - Current</p>
                     <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                       <li>4.1/4.5 GPA</li>
                       <li>Participated in the Computer Science Club and hackathons</li>
@@ -180,7 +180,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Undergraduate Research Student</h3>
+                <h3 className="text-xl font-bold">Research Student</h3>
                 <p className="text-muted-foreground">Kyungpook National Univ. | 2024.03 - 2024.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Develop and build a framework for translation and recommendation in various languages in medical domain</li>
@@ -189,7 +189,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">A.I. Research Intern</h3>
+                <h3 className="text-xl font-bold">Research Intern</h3>
                 <p className="text-muted-foreground">Beamworks. | 2023.12 - 2024.02</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>LLM research available in the medical domain for Question Answering</li>
@@ -199,7 +199,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold">A.I. Research Intern</h3>
+                <h3 className="text-xl font-bold">Research Intern</h3>
                 <p className="text-muted-foreground">Korea Institute of Science and Technology. | 2023.06 - 2023.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research of scene graph generation and segment anything base models</li>
