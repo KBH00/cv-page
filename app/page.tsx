@@ -171,7 +171,7 @@ const Home: React.FC = () => {
             <div className="space-y-8">
             <div>
                 <h3 className="text-xl font-bold">Research Intern</h3>
-                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology. <Link href="https://ibrain.kaist.ac.kr/" className="hover:underline" prefetch={false}>CNI Lab</Link>
+                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology. <Link href="https://ibrain.kaist.ac.kr/" className="hover:underline" prefetch={false}>CNI Lab </Link>
                 | 2024.09 - 2024.12</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research on fMRI processing</li>
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
                 <p className="text-muted-foreground">Kyungpook National Univ. <Link href="https://sites.google.com/view/ipalab" className="hover:underline" prefetch={false}>IPA Lab </Link>| 2024.03 - 2024.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Develop and build a framework for translation and recommendation in various languages in medical domain</li>
-                  <li>Collaborated with cross-functional teams to deploy to the server, fine-tuning language models and research about readability</li>
+                  <li>Collaborated with cross-functional teams to deploy to the server, fine-tuning language models and research about readabbility</li>
                   <li>Participated in code reviews and pair programming sessions</li>
                 </ul>
               </div>
