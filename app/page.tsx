@@ -181,7 +181,7 @@ const Home: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Research Student</h3>
-                <p className="text-muted-foreground">Kyungpook National Univ. <Link href="https://sites.google.com/view/ipalab" className="hover:underline" prefetch={false}>IPA Lab</Link>| 2024.03 - 2024.08</p>
+                <p className="text-muted-foreground">Kyungpook National Univ. <Link href="https://sites.google.com/view/ipalab" className="hover:underline" prefetch={false}>IPA Lab </Link>| 2024.03 - 2024.08</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Develop and build a framework for translation and recommendation in various languages in medical domain</li>
                   <li>Collaborated with cross-functional teams to deploy to the server, fine-tuning language models and research about readability</li>
