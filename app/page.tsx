@@ -171,8 +171,8 @@ const Home: React.FC = () => {
             <div className="space-y-8">
             <div>
                 <h3 className="text-xl font-bold">Research Intern</h3>
-                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology.
-                | 2024.09 - Present</p>
+                <p className="text-muted-foreground">Korea Advanced Institute of Science and Technology. <Link href="https://ibrain.kaist.ac.kr/" className="hover:underline" prefetch={false}>CNI Lab</Link>
+                | 2024.09 - 2024.12</p>
                 <ul className="list-disc pl-6 mt-2 text-muted-foreground">
                   <li>Research on fMRI processing</li>
                   <li>T2, FLAIR data analysis</li>
@@ -186,7 +186,7 @@ const Home: React.FC = () => {
                   <li>Develop and build a framework for translation and recommendation in various languages in medical domain</li>
                   <li>Collaborated with cross-functional teams to deploy to the server, fine-tuning language models and research about readability</li>
                   <li>Participated in code reviews and pair programming sessions</li>
-                </ul>Beamworks
+                </ul>
               </div>
               <div>
                 <h3 className="text-xl font-bold">Research Intern</h3>
